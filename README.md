@@ -181,7 +181,6 @@ def delete_pedido(pedido_id: int, db: Session = Depends(get_session)):
     db.delete(db_pedido)
     db.commit()
     return {"mensaje": "Pedido eliminado"}
-#DataBase.py
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -195,5 +194,3 @@ def get_session():
         yield dataBase
     finally:
         dataBase.close()
-
-    
